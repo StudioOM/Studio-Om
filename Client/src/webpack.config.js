@@ -52,13 +52,10 @@ const config = {
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            outputPath: 'images',
-            },
-          },
-        ],
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[hash][ext][query]'
+        }
       },
       {
         test: /\.(otf|woff)$/,
