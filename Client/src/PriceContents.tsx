@@ -2,7 +2,7 @@ import { Component } from "react";
 import React from "react";
 import title from "./assets/Rates title.png"
 import X from "./assets/X symbol.png"
-import montly from "./assets/monthly2.png"
+import montly from "./assets/monthly.png"
 import dropIn from "./assets/drop in2.png"
 import student from "./assets/student special2.png"
 import studentMonthly from "./assets/price box.png"
