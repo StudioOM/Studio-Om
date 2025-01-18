@@ -2,10 +2,10 @@ import { Component } from "react";
 import React from "react";
 import title from "./assets/Rates title.png"
 import X from "./assets/X symbol.png"
-import montly from "./assets/Monthly passes.png"
-import dropIn from "./assets/Drop in.png"
-import student from "./assets/Student special.png"
-import studentMonthly from "./assets/Asset 45.png"
+import montly from "./assets/monthly.png"
+import dropIn from "./assets/drop in2.png"
+import student from "./assets/student special2.png"
+import studentMonthly from "./assets/price box.png"
 import regularMontly from "./assets/Asset 44.png"
 import studentDropIn from "./assets/Student drop in.png"
 import regularDropIn from "./assets/Regular drop in.png"
@@ -32,16 +32,16 @@ export class PriceContents extends Component<PriceContentsProps, {}> {
                     <img className="tierTitle" src={montly}/>
                     <div className="innerTier">
                         <img src={regularMontly}/>
-                        <img src={studentMonthly}/>
+                        <img src={studentMonthly} style={{ transform: 'scale(1.125) translateY(10px)'}}/>
                     </div>
                     <div>
-                        <li>Access to 40+ yoga classes & events</li>
-                        <li>Lounge access to study/hangout</li>
-                        <li>Plant-based food & drinks</li>
-                        <li>1 week of FREE buddy pass</li>
-                        <li>Special in-store discounts</li>
-                        <li>Less than $4/class for regulars</li>
-                        <li>Refer a friend & get $10 off</li>
+                        <li>access to 40+ yoga classes & events</li>
+                        <li>lounge access to study/hangout</li>
+                        <li>plant-based food & drinks</li>
+                        <li>first week = FREE buddy pass</li>
+                        <li>special in-store discounts</li>
+                        <li>less than $4/class for regulars</li>
+                        <li>refer a friend & get $10 off</li>
                     </div>
                 </div>
                 <div className="tier">
@@ -56,9 +56,9 @@ export class PriceContents extends Component<PriceContentsProps, {}> {
                     <div className="innerTier">
                         <img src={studentSpecial}/>
                         <div className="studentList">
-                            <li>Access to 120+ classes & events</li>
-                            <li>Lounge access to study/hangout</li>
-                            <li>Plant-based food</li>
+                            <li>access to 120+ classes & events</li>
+                            <li>lounge access to study/hangout</li>
+                            <li>plant-based food</li>
                         </div>
                     </div>
                 </div>

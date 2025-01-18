@@ -4,7 +4,8 @@ import title from "./assets/Asset 32.png";
 import X from "./assets/X symbol.png";
 import tue from "./assets/Asset 34.png"
 import wed from "./assets/Asset 35.png"
-import fri from "./assets/Asset 36.png"
+import fri from "./assets/THURSDAY.png"
+// note that fri corresponds to thu
 import sat from "./assets/Asset 37.png"
 import sun from "./assets/Asset 5.png"
 
@@ -47,24 +48,24 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
                 <div className="classes">
                     <div className="classCard">
                         <div>
-                            <p>5 PM</p>
+                            <p>6:30 PM</p>
                         </div>
-                        <p>YOGA FOR STRENGTH</p>
-                        <p>Strong body = strong mind. A hatha vinyasa flow with a focus on muscle work, holding poses and challenging the mind's obstacles. </p>
+                        <p>VINYASA FLOW YOGA</p>
+                        <p>Flow with breath to movement in this all levels vinyasa yoga class</p>
                     </div>
                     <div className="classCard">
                         <div>
-                            <p>6 PM</p>
+                            <p>7:30 PM</p>
                         </div>
-                        <p>YOGA FOR BALANCE</p>
-                        <p> Feel grounded in your mind and body with this all-over hatha vinyasa flow for balance.</p>
+                        <p>CONSCIOUS WORKSHOP</p>
+                        <p>Wisdom discussions on conscious topics to help you live your best life</p>
                     </div>
                     <div className="classCard">
                         <div>
-                            <p>7.30 PM</p>
+                            <p>8:30 PM</p>
                         </div>
-                        <p>BEST-SELF WORKSHOPS</p>
-                        <p>Workshops designed to empower you through creativity, knowledge, expression, mindful insights, psychology and inspiration. We invite new speakers, teachers and guides every week to host workshops and help you unlock your best-self.</p>
+                        <p>VEGAN DINNER</p>
+                        <p>Plant-based and full of love, complimentary to the workshop or drop in for $10</p>
                     </div>
                 </div>
             </div>
@@ -82,24 +83,17 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
                 <div className="classes">
                     <div className="classCard">
                         <div>
-                            <p>5 PM</p>
+                            <p>6:30 PM</p>
                         </div>
-                        <p>YOGA FOR CALMING</p>
-                        <p>Slow down, move calmly and breathe deeply to reset the nervous system in this all-levels hatha vinyasa class.</p>
+                        <p>VINYASA FLOW YOGA</p>
+                        <p>Flow with breath to movement in this all levels vinyasa yoga class</p>
                     </div>
                     <div className="classCard">
                         <div>
-                            <p>6 PM</p>
+                            <p>7:30 PM</p>
                         </div>
-                        <p>YOGA FOR ENERGY</p>
-                        <p>Flow with focus and build energy and endurance in this more quick-paced hatha vinyasa class.</p>
-                    </div>
-                    <div className="classCard">
-                        <div>
-                            <p>7.30 PM</p>
-                        </div>
-                        <p>SELF CARE X SOUND</p>
-                        <p>Take time to invest in loving yourself through our Soundbaths which combine yoga nidra and sound frequency healing to help you reset and deeply relax. A unique new theme every week.</p>
+                        <p>SOUNDBATH</p>
+                        <p>An immersive sound frequency healing experience, therapeutic to the body and mind</p>
                     </div>
                 </div>
             </div>
@@ -117,10 +111,31 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
                 <div className="classes">
                     <div className="classCard">
                         <div>
-                            <p>6 PM</p>
+                            <p>6:30 PM</p>
                         </div>
-                        <p>YOGA FOR GOOD VIBES</p>
-                        <p>Release stress and muscle tension and harness positivity in this all-levels hatha vinyasa flow.</p>
+                        <p>VINYASA FLOW YOGA</p>
+                        <p>Flow with breath to movement in this all levels vinyasa yoga class</p>
+                    </div>
+                    <div className="classCard">
+                        <div>
+                            <p>6:30 PM</p>
+                        </div>
+                        <p>PHILOSOPHY NIGHT</p>
+                        <p>Making wisdom relevant - discussions based on the preliminary yoga text Bhagavad Gita</p>
+                    </div>
+                    <div className="classCard">
+                        <div>
+                            <p>7:30 PM</p>
+                        </div>
+                        <p>MANTRA BATH (KIRTAN)</p>
+                        <p>A joyful, active and immersive group meditation practice, combining the power of mantra and music</p>
+                    </div>
+                    <div className="classCard">
+                        <div>
+                            <p>8:30 PM</p>
+                        </div>
+                        <p>VEGAN DINNER</p>
+                        <p>Plant-based and full of love, complimentary to the mantra bath or drop in for $10</p>
                     </div>
                 </div>
             </div>
@@ -137,10 +152,17 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
                 <div className="classes">
                     <div className="classCard">
                         <div>
-                            <p>7.30 PM</p>
+                            <p>6 PM</p>
+                        </div>
+                        <p>RESTORATIVE FLOW YOGA</p>
+                        <p>Find deep muscle relaxation, release and balance to reset for the week</p>
+                    </div>
+                    <div className="classCard">
+                        <div>
+                            <p>7:15 PM</p>
                         </div>
                         <p>SOULFEAST</p>
-                        <p>A conscious night lounge event combining mantra music meditation (kirtan) with wisdom talks and a delicious plant-based dinner and dessert.</p>
+                        <p>Our weekly conscious party night - mantra music, wisdom talk and delicious plant-based dinner</p>
                     </div>
                 </div>
             </div>
@@ -159,22 +181,22 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
                         <div>
                             <p>10 AM</p>
                         </div>
-                        <p>YOGA FOR PRESENCE</p>
-                        <p> Discover yourself in the present moment. Begin with grounding breathwork and move up to a peak flow and deep stretch in this all-levels hatha vinyasa flow.</p>
+                        <p>YOGA X PILATES</p>
+                        <p>A fusion of vinyasa and pilates to build strength, endurance and grace</p>
                     </div>
                     <div className="classCard">
                         <div>
                             <p>11 AM</p>
                         </div>
-                        <p>YOGA FOR DEEP STRETCH DETOX</p>
-                        <p>Release tension and align the body in this deep-stretch restorative class. From athlete's to beginners, this class will help relieve and prevent chronic pain caused by tight muscles.</p>
+                        <p>DEEP STRETCH DETOX YOGA</p>
+                        <p>A restorative and detoxifying yoga class to reset and release tight muscles</p>
                     </div>
                     <div className="classCard">
                         <div>
                             <p>12 PM</p>
                         </div>
-                        <p>HIIT YOGA FUSION</p>
-                        <p>Combining the power of High Intensity Interval Training with the flow-like feel of a yoga class. Challenge yourself and walk out feeling stronger and more alive than ever.</p>
+                        <p>YOGA SLOW FLOW</p>
+                        <p>Vinyasa yoga class to help you slow down, breathe and find your inner peace</p>
                     </div>
                 </div>
             </div>

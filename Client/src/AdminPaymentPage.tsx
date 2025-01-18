@@ -12,7 +12,7 @@ type AdminPaymentPageProps = {
     onConfirmClick: () => void;
 };
 
-type PassType = "Drop in" | "2 Week Trial" | "Monthly" | "Semester Special" | "Third Party";
+type PassType = "Drop in" | "2 Week Trial" | "Monthly" | "Semester Special" | "Third Party" | "Free Pass";
 
 type PassTypes = {
     [key in PassType]: {
@@ -33,7 +33,8 @@ const passTypes: PassTypes = {
     "2 Week Trial": { duration: 2, classes: 1 },
     "Monthly": { duration: 4, classes: 1 },
     "Semester Special": { duration: 16, classes: 1 }, 
-    "Third Party": { duration: 0, classes: 1 }
+    "Third Party": { duration: 0, classes: 1 },
+    "Free Pass": { duration: 0, classes: 1 }
 };
 
 export class AdminPaymentPage extends Component<AdminPaymentPageProps, AdminPaymentPageState> {
@@ -66,6 +67,7 @@ export class AdminPaymentPage extends Component<AdminPaymentPageProps, AdminPaym
                             <input type="radio" value={"Venmo"} name="method" onChange={this.doPaymentMethodChange} />VENMO
                             <input type="radio" value={"Zelle"} name="method" onChange={this.doPaymentMethodChange} />ZELLE
                             <input type="radio" value={"Third Party"} name="method" onChange={this.doPaymentMethodChange} />THIRD PARTY
+                            <input type="radio" value={"Free Pass"} name="method" onChange={this.doPaymentMethodChange} />Free Pass
                         </div>
                         {this.doPaymentRenderChange()}
                     </div>
@@ -130,8 +132,8 @@ export class AdminPaymentPage extends Component<AdminPaymentPageProps, AdminPaym
         let passEndDate;
 
         if (this.state.passType === "Semester Special") {
-            passStartDate = "08-21-2024";
-            passEndDate = "12-14-2024";
+            passStartDate = "01-14-2025";
+            passEndDate = "05-11-2025";
         } else {
             passStartDate = passInfo.duration ? formatDate(currentDate) : null;
             passEndDate = passInfo.duration ? formatDate(endDate) : null;

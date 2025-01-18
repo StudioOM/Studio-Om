@@ -14,13 +14,14 @@ type FaqContentsState = {
     q3: boolean,
     q4: boolean,
     q5: boolean,
-    q6: boolean
+    q6: boolean,
+    q7: boolean 
 }
 
 export class FaqContents extends Component<FaqContentsProps, FaqContentsState> {
     constructor(props: FaqContentsProps) {
         super(props);
-        this.state = {q1: false, q2: false, q3: false, q4: false, q5: false, q6: false}
+        this.state = {q1: false, q2: false, q3: false, q4: false, q5: false, q6: false, q7: false}
     }
 
     render = (): JSX.Element => {
@@ -43,6 +44,8 @@ export class FaqContents extends Component<FaqContentsProps, FaqContentsState> {
                 {this.renderQ5()}
                 <div onClick={this.doQ6Click} className="question">HOW CAN I VOLUNTEER/GET INVOLVED?</div>
                 {this.renderQ6()}
+                <div onClick={this.doQ7Click} className="question">WHERE CAN I FIND PARKING?</div>
+                {this.renderQ7()}
             </div>
         </div>;
     }
@@ -94,6 +97,21 @@ export class FaqContents extends Component<FaqContentsProps, FaqContentsState> {
         }
         return <br></br>
     }
+    renderQ7 = (): JSX.Element => {
+        if (this.state.q7) {
+            return <div className="answer">
+                <ul>
+                <li>BEHIND THE BUILDING, COMMON PARKING FOR DIFFERENT RESTAURANTS (FIRST COME BASIS).</li>
+                <li>SMALL PARKING SPACE ON TOBERMAN STREET.</li>
+                <li>STREET PARKING ON UNION AND OTHER CLOSE BY STREETS.</li>
+                <li>METER PARKING ON HOOVER STREET.</li>
+                <li>FREE 2HRS PARKING AT USC VILLAGE (UNDERGROUND).</li>
+                </ul>
+                </div>
+        }
+        return <br></br>
+    }
+
 
     doQ1Click = (): void => {
         this.state.q1 ? this.setState({q1: false}) : this.setState({q1: true})
@@ -118,4 +136,16 @@ export class FaqContents extends Component<FaqContentsProps, FaqContentsState> {
     doQ6Click = (): void => {
         this.state.q6 ? this.setState({q6: false}) : this.setState({q6: true})
     }
+        
+    doQ7Click = (): void => {
+        this.setState(
+            (prevState) => ({ q7: !prevState.q7 }),
+            () => {
+                if (this.state.q7) {
+                    const element = document.querySelector(".answer:last-child");
+                    element?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+            }
+        );
+    };
 }
