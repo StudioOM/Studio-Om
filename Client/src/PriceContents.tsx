@@ -13,7 +13,7 @@ import studentMonthly from "./assets/Asset 15 new.svg"
 import regularMontly from "./assets/Asset 44.png"
 import studentDropIn from "./assets/Student drop in.png"
 import regularDropIn from "./assets/Regular drop in.png"
-// import studentSpecial from "./assets/Asset 46.png"
+import studentSpecial from "./assets/Asset 46.png"
 
 type PriceContentsProps = {
     onBackClick: () => void
@@ -56,17 +56,21 @@ export class PriceContents extends Component<PriceContentsProps, {}> {
                         <img src={studentDropIn}/>
                     </div>
                 </div>
-                <div className="tier">
-                    <img className="tierTitle" src={student} style={{ marginBottom: '60px',marginTop: '30px' }} />
-                    <div className="innerTier" style={{ marginBottom: '60px' }} >
-                        {/* <img src={studentSpecial}/> */}
-                        <div className="studentList">
+
+                <div className="tier" style={{ marginBottom: '60px' }} >
+                    <img className="tierTitle" src={student} style={{ marginBottom: '60px'}} />
+                    <div className="innerTier">
+                        <img src={studentSpecial}/>
+                    </div>
+                    <div>
                             <li>access to 120+ classes & events</li>
                             <li>lounge access to study/hangout</li>
                             <li>plant-based food</li>
-                        </div>
                     </div>
                 </div>
+
+
+
             </div>
         </div>;
     }  
