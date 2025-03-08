@@ -1469,23 +1469,24 @@ body {
 }
 
 .tue {
-    width: 10.438rem;
+    width: 11.5rem;
 }
 
 .wed {
-    width: 15.25rem;
+    width: 11.5rem;
 }
 
 .fri {
-    width: 9.938rem;
+    width: 11.5rem;
+    opacity: 0.95;
 }
 
 .sat {
- width: 12.375rem;
+ width: 11.5rem;
 }
 
 .sun {
-    width: 12.375rem;
+    width: 11.5rem;
 }
 
 #selected {

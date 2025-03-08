@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.76 25.2">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: #e9e9da;
+        font-family: NF-Lepetitcochon-Regular, 'NF-Le petit cochon';
+        font-size: 18px;
+        font-style: italic;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer_1">
+    <g id="_89" class="cls-1">
+      <text class="cls-2" transform="translate(0 15.3)"><tspan x="0" y="0">$39</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -64,6 +64,18 @@ const config = {
             filename: './fonts/[name][ext]'
         },
     },
+    {
+      test: /\.svg$/,
+      use: [
+        {
+          loader: '@svgr/webpack',
+          options: {
+            // You can add options here if needed
+          },
+        },
+        'url-loader', // or 'file-loader' if you prefer
+      ],
+    },
     ]
   },
 
