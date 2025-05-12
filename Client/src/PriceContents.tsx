@@ -42,11 +42,13 @@ export class PriceContents extends Component<PriceContentsProps, {}> {
                     <div>
                         <li>access to 40+ yoga classes & events</li>
                         <li>lounge access to study/hangout</li>
+                        <li>includes yoga mat rentals</li>
                         <li>plant-based food & drinks</li>
                         <li>first week = FREE buddy pass</li>
-                        <li>special in-store discounts</li>
+                        
+                        {/* <li>special in-store discounts</li>
                         <li>less than $4/class for regulars</li>
-                        <li>refer a friend & get $10 off</li>
+                        <li>refer a friend & get $10 off</li> */}
                     </div>
                 </div>
                 <div className="tier">

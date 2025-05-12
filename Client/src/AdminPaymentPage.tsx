@@ -12,7 +12,7 @@ type AdminPaymentPageProps = {
     onConfirmClick: () => void;
 };
 
-type PassType = "Drop in" | "2 Week Trial" | "Monthly" | "Semester Special" | "Third Party" | "Free Pass";
+type PassType = "Drop in" | "Monthly" | "Semester Special" | "One Week Trial";
 
 type PassTypes = {
     [key in PassType]: {
@@ -30,11 +30,9 @@ type AdminPaymentPageState = {
 
 const passTypes: PassTypes = {
     "Drop in": { duration: 0, classes: 1 },
-    "2 Week Trial": { duration: 2, classes: 1 },
     "Monthly": { duration: 4, classes: 1 },
-    "Semester Special": { duration: 16, classes: 1 }, 
-    "Third Party": { duration: 0, classes: 1 },
-    "Free Pass": { duration: 0, classes: 1 }
+    "Semester Special": { duration: 16, classes: 1 },
+    "One Week Trial": { duration: 1, classes: 1 }
 };
 
 export class AdminPaymentPage extends Component<AdminPaymentPageProps, AdminPaymentPageState> {
@@ -66,8 +64,6 @@ export class AdminPaymentPage extends Component<AdminPaymentPageProps, AdminPaym
                             <input type="radio" value={"Card"} name="method" onChange={this.doPaymentMethodChange} />CARD
                             <input type="radio" value={"Venmo"} name="method" onChange={this.doPaymentMethodChange} />VENMO
                             <input type="radio" value={"Zelle"} name="method" onChange={this.doPaymentMethodChange} />ZELLE
-                            <input type="radio" value={"Third Party"} name="method" onChange={this.doPaymentMethodChange} />THIRD PARTY
-                            <input type="radio" value={"Free Pass"} name="method" onChange={this.doPaymentMethodChange} />Free Pass
                         </div>
                         {this.doPaymentRenderChange()}
                     </div>
@@ -113,10 +109,11 @@ export class AdminPaymentPage extends Component<AdminPaymentPageProps, AdminPaym
 
         // Move on to post to db
         const formatDate = (date: Date): string => {
-            const day = String(date.getDate()).padStart(2, '0');
-            const month = String(date.getMonth() + 1).padStart(2, '0');
-            const year = date.getFullYear();
-            return `${month}-${day}-${year}`;
+            return date.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            });
         };
 
         const addWeeks = (date: Date, weeks: number): Date => {
@@ -132,8 +129,11 @@ export class AdminPaymentPage extends Component<AdminPaymentPageProps, AdminPaym
         let passEndDate;
 
         if (this.state.passType === "Semester Special") {
-            passStartDate = "01-14-2025";
-            passEndDate = "05-11-2025";
+            passStartDate = "May 12, 2025";
+            passEndDate = "August 12, 2025";
+        } else if (this.state.passType === "One Week Trial") {
+            passStartDate = formatDate(currentDate);
+            passEndDate = formatDate(addWeeks(currentDate, 1));
         } else {
             passStartDate = passInfo.duration ? formatDate(currentDate) : null;
             passEndDate = passInfo.duration ? formatDate(endDate) : null;

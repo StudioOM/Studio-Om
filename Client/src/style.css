@@ -37,6 +37,10 @@ body {
     overflow-y: hidden;
     overflow-x: hidden;
     background-image: url("assets/Asset 8.png");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 #main {
@@ -210,6 +214,10 @@ body {
         color: #e0e4d8;
         overflow-y: scroll;
         background-image: url("assets/Asset 8.png");
+        background-size: 100vw 100vh;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
     }
 
     #main {
@@ -1476,7 +1484,7 @@ body {
     width: 11.5rem;
 }
 
-.fri {
+.thu {
     width: 11.5rem;
     opacity: 0.95;
 }
@@ -1548,7 +1556,7 @@ body {
         width: 10.25rem;
     }
     
-    .fri {
+    .thu {
         width: 5.938rem;
     }
     
@@ -1588,7 +1596,7 @@ body {
          width: 22.25vw;
      }
      
-     .fri {
+     .thu {
          width: 14.938vw;
      }
      

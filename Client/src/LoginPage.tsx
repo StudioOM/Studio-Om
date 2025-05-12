@@ -27,7 +27,7 @@ export class LoginPage extends Component<LoginPageProps, LoginPageState> {
                 <input id="username" value={this.state.username} 
                         onChange={this.doUsernameChange}></input>
                 <p>PASSWORD</p>
-                <input id="password" value={this.state.password} 
+                <input id="password" type="password" value={this.state.password} 
                         onChange={this.doPasswordChange}></input>
                 <button onClick={this.doLoginClick} className="loginBut">LOGIN</button>
                 {this.renderError()}

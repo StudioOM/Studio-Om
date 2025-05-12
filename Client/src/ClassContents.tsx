@@ -2,12 +2,6 @@ import React from "react";
 import { Component } from "react";
 import title from "./assets/Asset 32.png";
 import X from "./assets/X symbol.png";
-import tue from "./assets/Asset 34.png"
-import wed from "./assets/Asset 35.png"
-import fri from "./assets/THURSDAY.png"
-// note that fri corresponds to thu
-import sat from "./assets/Asset 37.png"
-import sun from "./assets/Asset 5.png"
 
 
 type ClassContentsProps = {
@@ -15,7 +9,7 @@ type ClassContentsProps = {
 }
 
 type ClassContentsState = {
-    day: "t" | "w" | "f" | "s" | "su"
+    day: "t" | "w" | "th" | "s" | "su"
 }
 
 export class ClassContents extends Component<ClassContentsProps, ClassContentsState> {
@@ -35,16 +29,50 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
         </div>;
     }  
 
+    renderDaySelector = (): JSX.Element => {
+        const dayMap = [
+            { key: "t", label: "TUESDAY", className: "tue", onClick: this.doTClick },
+            { key: "w", label: "WEDNESDAY", className: "wed", onClick: this.doWClick },
+            { key: "th", label: "THURSDAY", className: "thu", onClick: this.doThClick },
+            { key: "s", label: "SATURDAY", className: "sat", onClick: this.doSClick },
+            { key: "su", label: "SUNDAY", className: "sun", onClick: this.doSuClick }
+        ];
+
+        const dayButtonStyle: React.CSSProperties = {
+            fontFamily: "Kento Bold",
+            fontSize: "1.75rem",
+            padding: "1rem",
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "3rem",
+            width: "10rem",
+            textAlign: "center",
+            fontWeight: "bold"
+        };
+
+        return (
+            <div className="days">
+                {dayMap.map(({ key, label, className, onClick }) => (
+                    <div
+                        key={key}
+                        onClick={onClick}
+                        className={className}
+                        id={this.state.day === key ? "selected" : undefined}
+                        style={dayButtonStyle}
+                    >
+                        {label}
+                    </div>
+                ))}
+            </div>
+        );
+    };
+
     renderDay = (): JSX.Element => {
         if (this.state.day === "w") {
             return <div>
-                <div className="days">
-                    <img src={tue} onClick={this.doTClick} className="tue"/>
-                    <img src={wed} onClick={this.doWClick} className="wed" id = "selected"/>
-                    <img src={fri} onClick={this.doFClick} className="fri"/>
-                    <img src={sat} onClick={this.doSClick} className="sat"/>
-                    <img src={sun} onClick={this.doSuClick} className="sun"/>
-                </div>
+                {this.renderDaySelector()}
                 <div className="classes">
                     <div className="classCard">
                         <div>
@@ -60,26 +88,20 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
                         <p>CONSCIOUS WORKSHOP</p>
                         <p>Wisdom discussions on conscious topics to help you live your best life</p>
                     </div>
-                    <div className="classCard">
+                    {/* <div className="classCard">
                         <div>
                             <p>8:30 PM</p>
                         </div>
                         <p>VEGAN DINNER</p>
                         <p>Plant-based and full of love, complimentary to the workshop or drop in for $10</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         }
     
         else if (this.state.day === "t") {
             return <div>
-                <div className="days">
-                    <img src={tue} onClick={this.doTClick} className="tue" id = "selected"/>
-                    <img src={wed} onClick={this.doWClick} className="wed"/>
-                    <img src={fri} onClick={this.doFClick} className="fri"/>
-                    <img src={sat} onClick={this.doSClick} className="sat"/>
-                    <img src={sun} onClick={this.doSuClick} className="sun"/>
-                </div>
+                {this.renderDaySelector()}
                 <div className="classes">
                     <div className="classCard">
                         <div>
@@ -99,15 +121,9 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
             </div>
         }
     
-        else if (this.state.day === "f") {
+        else if (this.state.day === "th") {
             return <div>
-                <div className="days">
-                    <img src={tue} onClick={this.doTClick} className="tue"/>
-                    <img src={wed} onClick={this.doWClick} className="wed"/>
-                    <img src={fri} onClick={this.doFClick} className="fri" id = "selected"/>
-                    <img src={sat} onClick={this.doSClick} className="sat"/>
-                    <img src={sun} onClick={this.doSuClick} className="sun"/>
-                </div>
+                {this.renderDaySelector()}
                 <div className="classes">
                     <div className="classCard">
                         <div>
@@ -116,13 +132,13 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
                         <p>VINYASA FLOW YOGA</p>
                         <p>Flow with breath to movement in this all levels vinyasa yoga class</p>
                     </div>
-                    <div className="classCard">
+                    {/* <div className="classCard">
                         <div>
                             <p>6:30 PM</p>
                         </div>
                         <p>PHILOSOPHY NIGHT</p>
                         <p>Making wisdom relevant - discussions based on the preliminary yoga text Bhagavad Gita</p>
-                    </div>
+                    </div> */}
                     <div className="classCard">
                         <div>
                             <p>7:30 PM</p>
@@ -130,29 +146,23 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
                         <p>MANTRA BATH (KIRTAN)</p>
                         <p>A joyful, active and immersive group meditation practice, combining the power of mantra and music</p>
                     </div>
-                    <div className="classCard">
+                    {/* <div className="classCard">
                         <div>
                             <p>8:30 PM</p>
                         </div>
                         <p>VEGAN DINNER</p>
                         <p>Plant-based and full of love, complimentary to the mantra bath or drop in for $10</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         }
         else if (this.state.day === "su") {
             return <div>
-                <div className="days">
-                    <img src={tue} onClick={this.doTClick} className="tue"/>
-                    <img src={wed} onClick={this.doWClick} className="wed"/>
-                    <img src={fri} onClick={this.doFClick} className="fri"/>
-                    <img src={sat} onClick={this.doSClick} className="sat"/>
-                    <img src={sun} onClick={this.doSuClick} className="sun" id = "selected"/>
-                </div>
+                {this.renderDaySelector()}
                 <div className="classes">
                     <div className="classCard">
                         <div>
-                            <p>6 PM</p>
+                            <p>6:30 PM</p>
                         </div>
                         <p>RESTORATIVE FLOW YOGA</p>
                         <p>Find deep muscle relaxation, release and balance to reset for the week</p>
@@ -169,13 +179,7 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
         }
         else {
             return <div>
-                <div className="days">
-                    <img src={tue} onClick={this.doTClick} className="tue"/>
-                    <img src={wed} onClick={this.doWClick} className="wed"/>
-                    <img src={fri} onClick={this.doFClick} className="fri"/>
-                    <img src={sat} onClick={this.doSClick} className="sat" id = "selected"/>
-                    <img src={sun} onClick={this.doSuClick} className="sun"/>
-                </div>
+                {this.renderDaySelector()}
                 <div className="classes">
                     <div className="classCard">
                         <div>
@@ -212,8 +216,8 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
         this.setState({day: "w"})
     }
 
-    doFClick = (): void => {
-        this.setState({day: "f"})
+    doThClick = (): void => {
+        this.setState({day: "th"})
     }
 
     doSClick = (): void => {
