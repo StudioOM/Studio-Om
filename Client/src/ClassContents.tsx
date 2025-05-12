@@ -53,18 +53,30 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
         };
 
         return (
-            <div className="days">
-                {dayMap.map(({ key, label, className, onClick }) => (
-                    <div
-                        key={key}
-                        onClick={onClick}
-                        className={className}
-                        id={this.state.day === key ? "selected" : undefined}
-                        style={dayButtonStyle}
-                    >
-                        {label}
-                    </div>
-                ))}
+            <div className="days-container" style={{
+                overflowX: "auto",
+                WebkitOverflowScrolling: "touch"
+            }}>
+                <div className="days" style={{ display: "inline-flex", gap: "1rem" }}>
+                    {dayMap.map(({ key, label, className, onClick }) => (
+                        <div
+                            key={key}
+                            onClick={onClick}
+                            className={className}
+                            id={this.state.day === key ? "selected" : undefined}
+                            style={dayButtonStyle}
+                        >
+                            {label}
+                        </div>
+                    ))}
+                </div>
+                {/* <div style={{
+                    height: "4px",
+                    backgroundColor: "#333",
+                    marginTop: "0.5rem",
+                    borderRadius: "2px",
+                    width: "100%"
+                }} /> */}
             </div>
         );
     };
