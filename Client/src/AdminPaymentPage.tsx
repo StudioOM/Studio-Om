@@ -64,6 +64,8 @@ export class AdminPaymentPage extends Component<AdminPaymentPageProps, AdminPaym
                             <input type="radio" value={"Card"} name="method" onChange={this.doPaymentMethodChange} />CARD
                             <input type="radio" value={"Venmo"} name="method" onChange={this.doPaymentMethodChange} />VENMO
                             <input type="radio" value={"Zelle"} name="method" onChange={this.doPaymentMethodChange} />ZELLE
+                            <input type="radio" value={"Free Pass"} name="method" onChange={this.doPaymentMethodChange} />FREE PASS
+                            <input type="radio" value={"Third Party"} name="method" onChange={this.doPaymentMethodChange} />THIRD PARTY
                         </div>
                         {this.doPaymentRenderChange()}
                     </div>

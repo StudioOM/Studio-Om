@@ -9,11 +9,14 @@ import dropIn from "./assets/Asset 13 new.svg"
 import student from "./assets/StudentSpecial.svg"
 // import student from "./assets/Asset 9.svg"
 // import studentMonthly from "./assets/price box.png"
-import studentMonthly from "./assets/Asset 15 new.svg"
-import regularMontly from "./assets/Asset 44.png"
+// import studentMonthly from "./assets/Asset 15 new.svg"
+import studentMonthly from "./assets/student_monthly2.svg"
+// import regularMontly from "./assets/Asset 44.png"
+import regularMontly from "./assets/regular_monthly2.svg"
 import studentDropIn from "./assets/Student drop in.png"
 import regularDropIn from "./assets/Regular drop in.png"
-import studentSpecial from "./assets/Asset 46.png"
+// import studentSpecial from "./assets/Asset 46.png"
+import studentSpecial from "./assets/semester_pass2.svg"
 
 type PriceContentsProps = {
     onBackClick: () => void
@@ -37,7 +40,7 @@ export class PriceContents extends Component<PriceContentsProps, {}> {
                     <img className="tierTitle" src={montly} style={{ marginBottom: '60px'}} />
                     <div className="innerTier">
                         <img src={regularMontly}/>
-                        <img src={studentMonthly} style={{ transform: 'scale(1.125) translateY(10px)'}}/>
+                        <img src={studentMonthly} />
                     </div>
                     <div>
                         <li>access to 40+ yoga classes & events</li>
@@ -62,7 +65,7 @@ export class PriceContents extends Component<PriceContentsProps, {}> {
                 <div className="tier" style={{ marginBottom: '60px' }} >
                     <img className="tierTitle" src={student} style={{ marginBottom: '60px'}} />
                     <div className="innerTier">
-                        <img src={studentSpecial}/>
+                        <img src={studentSpecial} style={{ marginBottom: '60px'}}/>
                     </div>
                     <div>
                             <li>access to 120+ classes & events</li>

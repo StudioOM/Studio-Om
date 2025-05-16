@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 174.96 106.8">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Kento-Bold, Kento;
+        font-size: 15.64px;
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #e9e9da;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        isolation: isolate;
+      }
+
+      .cls-5 {
+        fill: none;
+        filter: url(#drop-shadow-3);
+        stroke: #e9e9da;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        font-family: NF-Lepetitcochon-Regular, 'NF-Le petit cochon';
+        font-size: 18px;
+        font-style: italic;
+      }
+
+      .cls-3 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-4 {
+        filter: url(#drop-shadow-2);
+      }
+    </style>
+    <filter id="drop-shadow-1" x="21.6" y="15.84" width="131.76" height="49.2" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur" stdDeviation="5"/>
+      <feFlood flood-color="#231f20" flood-opacity=".2"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-2" x="60.96" y="46.32" width="55.44" height="55.44" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur-2" stdDeviation="5"/>
+      <feFlood flood-color="#231f20" flood-opacity=".2"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-3" x="0" y="0" width="174.96" height="106.8" filterUnits="userSpaceOnUse">
+      <feOffset dx="7" dy="7"/>
+      <feGaussianBlur result="blur-3" stdDeviation="5"/>
+      <feFlood flood-color="#231f20" flood-opacity=".2"/>
+      <feComposite in2="blur-3" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer_1">
+    <g>
+      <g id="INTRO" class="cls-3">
+        <text class="cls-1" transform="translate(29.78 37.3)"><tspan x="0" y="0">regular</tspan></text>
+      </g>
+      <g id="_89" class="cls-4">
+        <text class="cls-2" transform="translate(69.17 69.63)"><tspan x="0" y="0">$69</tspan></text>
+      </g>
+      <rect id="Rectangle_27" class="cls-5" x="9.18" y="9.01" width="142.78" height="74.79" rx="5.3" ry="5.3"/>
+    </g>
+  </g>
+</svg>

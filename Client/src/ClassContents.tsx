@@ -55,9 +55,10 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
         return (
             <div className="days-container" style={{
                 overflowX: "auto",
-                WebkitOverflowScrolling: "touch"
+                WebkitOverflowScrolling: "touch",
+                display: "block"
             }}>
-                <div className="days" style={{ display: "inline-flex", gap: "1rem" }}>
+                <div className="days" style={{ display: "flex", gap: "1rem", minWidth: "max-content", justifyContent: "center" }}>
                     {dayMap.map(({ key, label, className, onClick }) => (
                         <div
                             key={key}
@@ -70,13 +71,6 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
                         </div>
                     ))}
                 </div>
-                {/* <div style={{
-                    height: "4px",
-                    backgroundColor: "#333",
-                    marginTop: "0.5rem",
-                    borderRadius: "2px",
-                    width: "100%"
-                }} /> */}
             </div>
         );
     };
@@ -181,7 +175,7 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
                     </div>
                     <div className="classCard">
                         <div>
-                            <p>7:15 PM</p>
+                            <p>7:30 PM</p>
                         </div>
                         <p>SOULFEAST</p>
                         <p>Our weekly conscious party night - mantra music, wisdom talk and delicious plant-based dinner</p>
