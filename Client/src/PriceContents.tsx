@@ -10,13 +10,14 @@ import student from "./assets/StudentSpecial.svg"
 // import student from "./assets/Asset 9.svg"
 // import studentMonthly from "./assets/price box.png"
 // import studentMonthly from "./assets/Asset 15 new.svg"
-import studentMonthly from "./assets/student_monthly2.svg"
+import studentMonthly from "./assets/Asset 25.svg"
 // import regularMontly from "./assets/Asset 44.png"
-import regularMontly from "./assets/regular_monthly2.svg"
-import studentDropIn from "./assets/Student drop in.png"
-import regularDropIn from "./assets/Regular drop in.png"
+import regularMontly from "./assets/Asset 24.svg"
+
+import studentDropIn from "./assets/stud.svg"
+import regularDropIn from "./assets/reg.svg"
 // import studentSpecial from "./assets/Asset 46.png"
-import studentSpecial from "./assets/semester_pass2.svg"
+import studentSpecial from "./assets/Asset 26.svg"
 
 type PriceContentsProps = {
     onBackClick: () => void
