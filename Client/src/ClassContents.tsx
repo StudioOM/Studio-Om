@@ -84,8 +84,8 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
                         <div>
                             <p>6:30 PM</p>
                         </div>
-                        <p>VINYASA FLOW YOGA</p>
-                        <p>Flow with breath to movement in this all levels vinyasa yoga class</p>
+                        <p>GENTLE STRETCH AND RELEASE VINYASA</p>
+                        <p>A slower paced vinyasa flow with deep stretch and muscle releasing poses. Suitable for prenatal, beginners or those who enjoy a slower, mindful pace.</p>
                     </div>
                     <div className="classCard">
                         <div>
