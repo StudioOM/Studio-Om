@@ -2,82 +2,95 @@ import { Component } from "react";
 import React from "react";
 import title from "./assets/Rates title.png"
 import X from "./assets/X symbol.png"
-import montly from "./assets/Asset 11 new.svg"
-// import montly from "./assets/Asset 8.svg"
-import dropIn from "./assets/Asset 13 new.svg"
-// import dropIn from "./assets/Asset 7.svg"
-import student from "./assets/StudentSpecial.svg"
-// import student from "./assets/Asset 9.svg"
-// import studentMonthly from "./assets/price box.png"
-// import studentMonthly from "./assets/Asset 15 new.svg"
-import studentMonthly from "./assets/Asset 25.svg"
-// import regularMontly from "./assets/Asset 44.png"
-import regularMontly from "./assets/Asset 24.svg"
-
-import studentDropIn from "./assets/stud.svg"
-import regularDropIn from "./assets/reg.svg"
-// import studentSpecial from "./assets/Asset 46.png"
-import studentSpecial from "./assets/Asset 26.svg"
+import regularMonthly from './assets/Asset 24.svg';
+import studentMonthly from './assets/Asset 25.svg';
+import regularDropIn from './assets/reg.svg';
+import studentDropIn from './assets/stud.svg';
+import studentSpecial from './assets/Asset 26.svg';
 
 type PriceContentsProps = {
     onBackClick: () => void
 }
 
-export class PriceContents extends Component<PriceContentsProps, {}> {
+type PriceContentsState = {
+    openTiers: {
+        [key: string]: boolean;
+    }
+};
+
+export class PriceContents extends Component<PriceContentsProps, PriceContentsState> {
+    state: PriceContentsState = {
+        openTiers: {}
+    };
+
+    toggleTier = (tierKey: string) => {
+        this.setState(prevState => ({
+            openTiers: {
+                ...prevState.openTiers,
+                [tierKey]: !prevState.openTiers[tierKey]
+            }
+        }));
+    };
+
     constructor(props: PriceContentsProps) {
         super(props);
     }
 
     render = (): JSX.Element => {
-        return <div className="page-contents">
-            
-            <div className = "pageHeader">
-                <div className="empty"></div>
-                <img className="ratesTitle" src={title}/>
-                <img className="close" src={X} onClick={this.props.onBackClick}/>
+        return (
+            <div className="page-contents">
+                <div className="pageHeader">
+                    <div className="empty"></div>
+                    <img className="ratesTitle" src={title} />
+                    <img className="close" src={X} onClick={this.props.onBackClick} />
+                </div>
+                <div className="questions">
+                    <div onClick={() => this.toggleTier('monthly')} className="question" style={{ margin: '1rem 0' }}>MONTHLY PASSES</div>
+                    {this.state.openTiers['monthly'] && (
+                        <div className="answer">
+                          <div style={{ display: 'flex', flexDirection: window.innerWidth <= 768 ? 'column' : 'row', justifyContent: 'center', alignItems: 'center', gap: '1rem' }}>
+                            <img src={regularMonthly} alt="Regular Monthly" style={{ maxWidth: window.innerWidth <= 768 ? '80%' : '45%', marginLeft: '6%' }} />
+                            <img src={studentMonthly} alt="Student Monthly" style={{ maxWidth: window.innerWidth <= 768 ? '80%' : '45%', marginLeft: '6%' }} />
+                          </div>
+                          <div style={{ display: 'flex', justifyContent: 'center' }}>
+                            <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', textAlign: 'left', lineHeight: '2rem', fontSize: '1.2rem', fontFamily: '"Courier Prime"', color: '#e0e4d8', maxWidth: '30rem' }}>
+                                <li>Access to 40+ yoga classes & events</li>
+                                <li>Lounge access to study/hangout</li>
+                                <li>Includes yoga mat rentals</li>
+                                <li>Plant-based food & drinks</li>
+                                <li>First week = FREE buddy pass</li>
+                            </ul>
+                          </div>
+                        </div>
+                    )}
+
+                    <div onClick={() => this.toggleTier('dropin')} className="question" style={{ margin: '1rem 0' }}>DROP IN</div>
+                    {this.state.openTiers['dropin'] && (
+                        <div className="answer">
+                          <div style={{ display: 'flex', flexDirection: window.innerWidth <= 768 ? 'column' : 'row', justifyContent: 'center', alignItems: 'center', gap: '1rem' }}>
+                            <img src={regularDropIn} alt="Regular Drop-in" style={{ maxWidth: window.innerWidth <= 768 ? '80%' : '45%', marginLeft: '6%' }} />
+                            <img src={studentDropIn} alt="Student Drop-in" style={{ maxWidth: window.innerWidth <= 768 ? '80%' : '45%', marginLeft: '6%' }} />
+                          </div>
+                        </div>
+                    )}
+
+                    <div onClick={() => this.toggleTier('student')} className="question" style={{ margin: '1rem 0' }}>STUDENT SPECIAL</div>
+                    {this.state.openTiers['student'] && (
+                        <div className="answer">
+                          <div style={{ display: 'flex', justifyContent: 'center' }}>
+                            <img src={studentSpecial} alt="Student Special" style={{ maxWidth: window.innerWidth <= 768 ? '80%' : '45%', marginLeft: '6%' }} />
+                          </div>
+                          <div style={{ display: 'flex', justifyContent: 'center' }}>
+                            <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', textAlign: 'left', lineHeight: '2rem', fontSize: '1.2rem', fontFamily: '"Courier Prime"', color: '#e0e4d8', maxWidth: '30rem' }}>
+                                <li>Access to 120+ classes & events</li>
+                                <li>Lounge access to study/hangout</li>
+                                <li>Plant-based food</li>
+                            </ul>
+                          </div>
+                        </div>
+                    )}
+                </div>
             </div>
-            <div className="allTiers">
-                <div className="tier" style={{ marginBottom: '60px' }} >
-                    <img className="tierTitle" src={montly} style={{ marginBottom: '60px'}} />
-                    <div className="innerTier">
-                        <img src={regularMontly}/>
-                        <img src={studentMonthly} />
-                    </div>
-                    <div>
-                        <li>access to 40+ yoga classes & events</li>
-                        <li>lounge access to study/hangout</li>
-                        <li>includes yoga mat rentals</li>
-                        <li>plant-based food & drinks</li>
-                        <li>first week = FREE buddy pass</li>
-                        
-                        {/* <li>special in-store discounts</li>
-                        <li>less than $4/class for regulars</li>
-                        <li>refer a friend & get $10 off</li> */}
-                    </div>
-                </div>
-                <div className="tier">
-                    <img className="tierTitle" src={dropIn} style={{ marginBottom: '60px' }} />
-                    <div className="innerTier">
-                        <img src={regularDropIn}/>
-                        <img src={studentDropIn}/>
-                    </div>
-                </div>
-
-                <div className="tier" style={{ marginBottom: '60px' }} >
-                    <img className="tierTitle" src={student} style={{ marginBottom: '60px'}} />
-                    <div className="innerTier">
-                        <img src={studentSpecial} style={{ marginBottom: '60px'}}/>
-                    </div>
-                    <div>
-                            <li>access to 120+ classes & events</li>
-                            <li>lounge access to study/hangout</li>
-                            <li>plant-based food</li>
-                    </div>
-                </div>
-
-
-
-            </div>
-        </div>;
-    }  
+        );
+    }
 }
