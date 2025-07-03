@@ -6,11 +6,11 @@ import text from "./assets/Asset 39.png";
 import emailjs from "emailjs-com";
 
 // Initialize EmailJS
-emailjs.init("7Cc_vyP4WFrvI0n3l"); // Your public key
+emailjs.init("UY2GqXJF65fSPVsE0"); // Your public key
 
 // UPDATE THESE VALUES after creating your service and template
-const EMAILJS_SERVICE_ID = "service_t6zbm77"; // Add your service ID after creating it
-const EMAILJS_TEMPLATE_ID = "template_tvfon7m"; // Add your template ID after creating it
+const EMAILJS_SERVICE_ID = "service_o7jtk5p"; // Add your service ID after creating it
+const EMAILJS_TEMPLATE_ID = "template_4725eiw"; // Add your template ID after creating it
 
 type ContactContentsProps = {
     onBackClick: () => void;

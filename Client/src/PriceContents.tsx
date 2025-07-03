@@ -53,7 +53,16 @@ export class PriceContents extends Component<PriceContentsProps, PriceContentsSt
                             <img src={studentMonthly} alt="Student Monthly" style={{ maxWidth: window.innerWidth <= 768 ? '80%' : '45%', marginLeft: '6%' }} />
                           </div>
                           <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', textAlign: 'left', lineHeight: '2rem', fontSize: '1.2rem', fontFamily: '"Courier Prime"', color: '#e0e4d8', maxWidth: '30rem' }}>
+                            <ul style={{
+                                listStyleType: 'disc',
+                                paddingLeft: '1.5rem',
+                                textAlign: 'left',
+                                fontSize: window.innerWidth > 768 ? '2.5rem' : '1rem',
+                                lineHeight: window.innerWidth > 768 ? '2.5rem' : '1.4rem',
+                                fontFamily: '"Courier Prime"',
+                                color: '#e0e4d8',
+                                maxWidth: window.innerWidth > 768 ? '60rem' : '30rem'
+                            }}>
                                 <li>Access to 40+ yoga classes & events</li>
                                 <li>Lounge access to study/hangout</li>
                                 <li>Includes yoga mat rentals</li>
@@ -81,7 +90,16 @@ export class PriceContents extends Component<PriceContentsProps, PriceContentsSt
                             <img src={studentSpecial} alt="Student Special" style={{ maxWidth: window.innerWidth <= 768 ? '80%' : '45%', marginLeft: '6%' }} />
                           </div>
                           <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', textAlign: 'left', lineHeight: '2rem', fontSize: '1.2rem', fontFamily: '"Courier Prime"', color: '#e0e4d8', maxWidth: '30rem' }}>
+                            <ul style={{
+                                listStyleType: 'disc',
+                                paddingLeft: '1.5rem',
+                                textAlign: 'left',
+                                fontSize: window.innerWidth > 768 ? '2.5rem' : '1rem',
+                                lineHeight: window.innerWidth > 768 ? '2.5rem' : '1.4rem',
+                                fontFamily: '"Courier Prime"',
+                                color: '#e0e4d8',
+                                maxWidth: window.innerWidth > 768 ? '60rem' : '30rem'
+                            }}>
                                 <li>Access to 120+ classes & events</li>
                                 <li>Lounge access to study/hangout</li>
                                 <li>Plant-based food</li>
