@@ -131,8 +131,8 @@ export class AdminPaymentPage extends Component<AdminPaymentPageProps, AdminPaym
         let passEndDate;
 
         if (this.state.passType === "Semester Special") {
-            passStartDate = "May 12, 2025";
-            passEndDate = "August 12, 2025";
+            passStartDate = "Aug 18, 2025";
+            passEndDate = "December 14, 2025";
         } else if (this.state.passType === "One Week Trial") {
             passStartDate = formatDate(currentDate);
             passEndDate = formatDate(addWeeks(currentDate, 1));
