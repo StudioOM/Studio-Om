@@ -1,1 +1,1 @@
-Checkout the website at https://studioom.la
+Checkout the website at https://studioomla.org/
