@@ -34,7 +34,7 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
             { key: "t", label: "TUESDAY", className: "tue", onClick: this.doTClick },
             { key: "w", label: "WEDNESDAY", className: "wed", onClick: this.doWClick },
             { key: "th", label: "THURSDAY", className: "thu", onClick: this.doThClick },
-            { key: "s", label: "SATURDAY", className: "sat", onClick: this.doSClick },
+            // { key: "s", label: "SATURDAY", className: "sat", onClick: this.doSClick },
             { key: "su", label: "SUNDAY", className: "sun", onClick: this.doSuClick }
         ];
 
