@@ -34,8 +34,8 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
             { key: "t", label: "TUESDAY", className: "tue", onClick: this.doTClick },
             { key: "w", label: "WEDNESDAY", className: "wed", onClick: this.doWClick },
             { key: "th", label: "THURSDAY", className: "thu", onClick: this.doThClick },
-            // { key: "s", label: "SATURDAY", className: "sat", onClick: this.doSClick },
-            { key: "su", label: "SUNDAY", className: "sun", onClick: this.doSuClick }
+            { key: "s", label: "SATURDAY", className: "sat", onClick: this.doSClick },
+            // { key: "su", label: "SUNDAY", className: "sun", onClick: this.doSuClick }
         ];
 
         const dayButtonStyle: React.CSSProperties = {
@@ -149,8 +149,8 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
                         <div>
                             <p>7:30 PM</p>
                         </div>
-                        <p>MANTRA BATH (KIRTAN)</p>
-                        <p>A joyful, active and immersive group meditation practice, combining the power of mantra and music</p>
+                        <p>SOULFEAST</p>
+                        <p>Our weekly conscious party night - mantra music, wisdom talk and delicious plant-based dinner</p>
                     </div>
                     {/* <div className="classCard">
                         <div>
@@ -162,7 +162,7 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
                 </div>
             </div>
         }
-        else if (this.state.day === "su") {
+        else if (this.state.day === "s") {
             return <div>
                 {this.renderDaySelector()}
                 <div className="classes">
@@ -177,8 +177,8 @@ export class ClassContents extends Component<ClassContentsProps, ClassContentsSt
                         <div>
                             <p>7:30 PM</p>
                         </div>
-                        <p>SOULFEAST</p>
-                        <p>Our weekly conscious party night - mantra music, wisdom talk and delicious plant-based dinner</p>
+                        <p>WELLNESS WORKSHOP</p>
+                        <p>Wisdom discussions on conscious topics to help you live your best life</p>
                     </div>
                 </div>
             </div>
